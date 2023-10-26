@@ -1,0 +1,29 @@
+.main {
+  border-radius: 29px;
+  background-color: rgb(224, 230, 240);
+  box-shadow: 35px 35px 100px #cfd8e3, -35px -35px 100px #d8dadd;
+
+  transition: all 0.2s ease;
+}
+
+body {
+  background-color: rgb(224, 230, 240)
+}
+
+.s2{
+
+    background-color:  rgb(224, 230, 240);
+
+}
+
+.s1{box-shadow: 35px 35px 100px #cfd8e3, -35px -35px 100px #d8dadd;}
+
+.tiles{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color:  rgb(217, 227, 241);
+}
+
+.s2-1{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color:  rgb(217, 227, 241);
+}
