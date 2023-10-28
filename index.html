@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="clouds.svg" type="image/x-icon">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="clouds.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -20,7 +21,7 @@
     <div class="MainContainer">
 
         <div class="wrapper w-[100vw] h-[100vh] flex justify-center items-center">
-            <div class="main w-[80vw] h-[80vh] lg:h-[60vh] lg:w-[60vw] flex lg:flex-row flex-col rounded-lg">
+            <div class="main w-[80vw] h-[80vh] lg:h-[62vh] lg:w-[65vw] flex lg:flex-row items-center flex-col rounded">
 
 
 
@@ -38,7 +39,7 @@
 
                     <div class="s1-1 flex justify-center items-center  w-[50%] lg:w-[100%] h-[30vh]">
 
-                        <img src="cloudsun.svg" class="h-[30vh] bg-[]">
+                        <img src="cloudsun.svg" class="h-[30vh] mainIcon bg-[]">
 
                     </div>
 
@@ -47,7 +48,7 @@
 
 
                     <div
-                        class="s1-2 flex flex-col lg:flex-row   items-center justify-center w-[50%] lg:w-[100%] h-[100%] p-2">
+                        class="s1-2 flex flex-col lg:flex-row  text-[#072541] items-center justify-center w-[50%] lg:w-[100%] h-[100%] p-2">
 
 
 
@@ -113,7 +114,7 @@
                             class="tiles w-[100%] h-[33.33%] rounded-lg p-2 flex justify-between items-center justify-center">
                             <div>
                                 <h1>tomorrow</h1>
-                                <h1>sunny</h1>
+                                <h1 class="day1sum">sunny</h1>
                                 </h1>
                             </div>
                             <div class="nextTemp lg:text-[2rem]">
@@ -124,7 +125,7 @@
                             class="tiles w-[100%] h-[33.33%] rounded-lg p-2 flex justify-between items-center justify-center">
                             <div>
                                 <h1>friday</h1>
-                                <h1>sunny</h1>
+                                <h1 class="day2sum">sunny</h1>
                             </div>
                             <div class="nextTemp lg:text-[2rem]">
                                 <h1 class="day2temp">0</h1>
@@ -134,7 +135,7 @@
                             class="tiles w-[100%] h-[33.33%] rounded-lg p-2 flex justify-between items-center justify-center">
                             <div>
                                 <h1>saturday</h1>
-                                <h1>sunny</h1>
+                                <h1 class="day3sum">sunny</h1>
                             </div>
                             <div class="nextTemp lg:text-[2rem]">
                                 <h1 class="day3temp">0</h1>

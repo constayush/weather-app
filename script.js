@@ -11,7 +11,7 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
-    nolocation()
+    nolocation();
   }
 }
 
@@ -40,6 +40,64 @@ function showPosition(position) {
       return res.json();
     })
     .then((data) => {
+      
+
+
+
+
+// if (data.daily.weathercode[0] == 3 ){  document.querySelector(".day1sum").innerHTML = "Clear"}
+// else if (data.daily.weathercode>= 1 &&
+//   data.daily.weathercode< 49 ){}
+//   else if (data.current.weathercode > 50 &&
+//     data.current.weathercode <= 67 ){}
+//     else if (data.current.weathercode > 70 &&
+//       data.current.weathercode < 78 ){}
+//       else if (data.current.weathercode < 100 &&
+//         data.current.weathercode > 79){}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      if (data.current.weathercode == 3 && data.current.is_day == 1) {
+        
+        document.querySelector(".mainIcon").src = "sun.svg";
+      } else if (data.current.weathercode == 3 && data.current.is_day == 0) {
+        document.querySelector(".mainIcon").src = "moon.svg";
+      } else if (
+        data.current.weathercode >= 1 &&
+        data.current.weathercode < 49
+      ) {
+        document.querySelector(".mainIcon").src = "clouds.svg";
+      } else if (
+        data.current.weathercode > 50 &&
+        data.current.weathercode <= 67
+      ) {
+        document.querySelector(".mainIcon").src = "rain.svg";
+      } else if (
+        data.current.weathercode > 70 &&
+        data.current.weathercode < 78
+      ) {
+        document.querySelector(".mainIcon").src = "snow.svg";
+      } else if (
+        data.current.weathercode < 100 &&
+        data.current.weathercode > 79
+      ) {
+        document.querySelector(".mainIcon").src = "thunder.svg";
+      }
+
       document.querySelector(".temp").innerHTML = data.current.temperature_2m;
       document.querySelector(".wind").innerHTML =
         data.current.windspeed_10m + "km/h";
@@ -55,6 +113,7 @@ function showPosition(position) {
       document.querySelector(".day3temp").innerHTML =
         data.daily.temperature_2m_max[2] + "°C";
       console.log(data);
+      console.log(data.current.weathercode);
     });
 }
 

@@ -1,32 +1,37 @@
 .main {
   border-radius: 29px;
   background-color: rgb(224, 230, 240);
-  box-shadow: 35px 35px 100px #cfd8e3, -35px -35px 100px #d8dadd;
+  box-shadow: #07254148 0px 7px 29px 0px;
 
   transition: all 0.2s ease;
+}
+body{
+
+  color: #072541;
 }
 
 body {
   background-color: rgb(224, 230, 240);
 }
 
-.s2 {
+/* .s2 {
   background-color: rgb(224, 230, 240);
-}
+} */
 
-.s1 {
+/* .s1 {
   box-shadow: 35px 35px 100px #cfd8e3, -35px -35px 100px #d8dadd;
-}
+} */
 
 .tiles {
   transition: all 0.2s ease;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: rgb(217, 227, 241);
+  box-shadow: #0725412a 0px 7px 29px 0px;
+  background-color: rgb(200, 218, 244);
 }
 
 .s2-1 {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: rgb(217, 227, 241);
+  box-shadow: #0725412a 0px 7px 29px 0px;
+  background-color: #072541e9;
+  color: #cfd8e3;
 }
 
 .nolocation {
@@ -39,3 +44,5 @@ body {
 .tiles:hover {
   transform: scale(1.1);
 }
+
+
