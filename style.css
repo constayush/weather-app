@@ -5,8 +5,7 @@
 
   transition: all 0.2s ease;
 }
-body{
-
+body {
   color: #072541;
 }
 
@@ -14,18 +13,11 @@ body {
   background-color: rgb(224, 230, 240);
 }
 
-/* .s2 {
-  background-color: rgb(224, 230, 240);
-} */
-
-/* .s1 {
-  box-shadow: 35px 35px 100px #cfd8e3, -35px -35px 100px #d8dadd;
-} */
-
 .tiles {
   transition: all 0.2s ease;
   box-shadow: #0725412a 0px 7px 29px 0px;
-  background-color: rgb(200, 218, 244);
+
+  background-color: rgb(190, 213, 245);
 }
 
 .s2-1 {
@@ -42,7 +34,13 @@ body {
 }
 
 .tiles:hover {
+  background-color: rgb(177, 205, 245);
   transform: scale(1.1);
 }
 
 
+
+.secondary{
+  box-shadow: #0725412a 0px 7px 29px 0px;
+
+}

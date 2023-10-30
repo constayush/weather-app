@@ -40,61 +40,63 @@ function showPosition(position) {
       return res.json();
     })
     .then((data) => {
+      for (i = 0; i <= data.daily.weathercode.length; i++) {
+        if (data.daily.weathercode[i] == 0) {
+          document.querySelector(`.day${i}sum`).innerHTML = "Clear";
+        } else if (
+          data.daily.weathercode[i] >= 1 &&
+          data.daily.weathercode[i] < 49
+        ) {
+          document.querySelector(`.day${i}sum`).innerHTML = "Clouds";
+        } else if (
+          data.daily.weathercode[i] > 50 &&
+          data.daily.weathercode[i] <= 67
+        ) {
+          document.querySelector(`.day${i}sum`).innerHTML = "rain";
+        } else if (
+          data.daily.weathercode[i] > 70 &&
+          data.daily.weathercode[i] < 78
+        ) {
+          document.querySelector(`.day${i}sum`).innerHTML = "snow";
+        } else if (
+          data.daily.weathercode[i] < 100 &&
+          data.daily.weathercode[i] > 79
+        ) {
+          document.querySelector(`.day${i}sum`).innerHTML = "thunderstrom";
+        }
+      }
+
       
 
-
-
-
-// if (data.daily.weathercode[0] == 3 ){  document.querySelector(".day1sum").innerHTML = "Clear"}
-// else if (data.daily.weathercode>= 1 &&
-//   data.daily.weathercode< 49 ){}
-//   else if (data.current.weathercode > 50 &&
-//     data.current.weathercode <= 67 ){}
-//     else if (data.current.weathercode > 70 &&
-//       data.current.weathercode < 78 ){}
-//       else if (data.current.weathercode < 100 &&
-//         data.current.weathercode > 79){}
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      if (data.current.weathercode == 3 && data.current.is_day == 1) {
-        
+      if (data.current.weathercode == 0 && data.current.is_day == 1) {
+        document.querySelector(`.currentsum`).innerHTML = "Clear";
         document.querySelector(".mainIcon").src = "sun.svg";
-      } else if (data.current.weathercode == 3 && data.current.is_day == 0) {
+      } else if (data.current.weathercode == 0 && data.current.is_day == 0) {
+        document.querySelector(`.currentsum`).innerHTML = "Clear";
         document.querySelector(".mainIcon").src = "moon.svg";
       } else if (
         data.current.weathercode >= 1 &&
         data.current.weathercode < 49
       ) {
+        document.querySelector(`.currentsum`).innerHTML = "Clouds";
         document.querySelector(".mainIcon").src = "clouds.svg";
       } else if (
         data.current.weathercode > 50 &&
         data.current.weathercode <= 67
       ) {
+        document.querySelector(`.currentsum`).innerHTML = "rain";
         document.querySelector(".mainIcon").src = "rain.svg";
       } else if (
         data.current.weathercode > 70 &&
         data.current.weathercode < 78
       ) {
+        document.querySelector(`.currentsum`).innerHTML = "snow";
         document.querySelector(".mainIcon").src = "snow.svg";
       } else if (
         data.current.weathercode < 100 &&
         data.current.weathercode > 79
       ) {
+        document.querySelector(`.currentsum`).innerHTML = "thunderstrom";
         document.querySelector(".mainIcon").src = "thunder.svg";
       }
 
@@ -105,7 +107,6 @@ function showPosition(position) {
         data.current.precipitation + "mm";
       document.querySelector(".humidity").innerHTML =
         data.current.relativehumidity_2m + "%";
-
       document.querySelector(".day1temp").innerHTML =
         data.daily.temperature_2m_max[0] + "°C";
       document.querySelector(".day2temp").innerHTML =
